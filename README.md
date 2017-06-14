@@ -1,11 +1,6 @@
 # Hyperledger On Arm
 Makes hyperledger version 1.0..0 alpha2 working on arm architectures as well (tested on armv7l - Raspberry Pi 3 Model B)
 
-[[CURRENTLY UNDER CONSTRUCTION]]
-IT'S WORKING BUT THE STEPS TO INITIALIZE IT (this readme) IS UNDER CONSTRUCTION AND TESTING.
-
-The docker hub images will be synced this evening so it's not working right now (06/13/2017).
-
 ### Steps to make the getting_started to work :
 
 Currently still working with the beta 1.0.0 tutorial on : http://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html
@@ -42,4 +37,5 @@ You can also fulfill it by followind theses commands then reading the getting_st
   
  ### WARNINGS
  As presented on the tutorial page, the scripts network.sh and scripts/script.sh aren't working. They have been removed so it is unlikely that they
- would work as most of the files have been adapted (docker-compose-cli.yaml for example).
+ would work as most of the files have been adapted (docker-compose-cli.yaml for example).  
+After some modifications between two runs, it may be necessary to remove the old chaincode image for the instantiate to work properly.
