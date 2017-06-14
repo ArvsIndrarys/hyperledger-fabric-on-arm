@@ -101,8 +101,15 @@ function generateChannelArtifacts() {
 
 # Modifies the nase/peer.yaml file so as the chaincode instantiation takes place on the same network as the peers
 function modifyPeerBase() {
-	NETWORK_HL=$(basename $PWD)
+	echo "##########################################################"
+        echo "#########  Modifying base/peer-base.yaml file ############"
+        echo "##########################################################"
+
+
+	NETWORK_HL=$(basename $PWD | tr '[:upper:]' '[:lower:]')
+	echo $NETWORK_HL
 	sed -i -e "/NETWORKMODE/c\      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE="$NETWORK_HL"_default" base/peer-base.yaml
+	echo "Modified ./base/peer-base.yaml to remplace the network CORE_VM_HOSTCONFIG_NETWORKMODE to $NETWORK_HL default"
 }
 
 generateCerts
