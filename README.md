@@ -16,7 +16,14 @@ From now on, the tutorial shall work with only one change, add -t 20 at the end 
 
 You can also fulfill it by followind theses commands then reading the getting_started and checking how it works :  
 ```./generate_artifacts```  
-  
+ 
+
+In case you don't use ./generate_artifacts, you have to modify the base/peer-base.yaml file on the line - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE= to correspond to - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=(folder with docker-compose-cli.bash)_default either by modifying it yourself or by using :
+```NETWORK_CC=$(basename $PWD)```  
+then ```sed -i -e "/NETWORKMODE/c\      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE="$NETWORK_CC"_default" base/peer-base.yaml```
+ 
+
+ 
 ```CHANNEL_NAME=mychannel TIMEOUT=100 docker-compose -f docker-compose-cli.yaml -d```  
   
 ```docker exec -it cli bash```  
