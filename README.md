@@ -8,8 +8,10 @@ Currently still working with the beta 1.0.0 tutorial on : http://hyperledger-fab
 So open that link and execute this commands : 
 
 ```
-go get github.com/Lindemark/hyperledgerOnArm
+go get github.com/Lindemark/hyperledger-on-arm
+cd ~/go/src/github.com/Lindemark/hyperledger-on-arm
 ```
+and next :
 ```
 ./bootstrap.sh
 ```
@@ -17,7 +19,7 @@ From now on, the tutorial shall work with only one change, add -t 20 at the end 
 
 ### In case the tutorial doesn't work
 
-You can also fulfill it by followind theses commands then reading the getting_started and checking how it works :  
+You can also complete it by followind theses commands then reading the getting_started and checking how it works :  
 ```
 ./generate_artifacts
 ```
@@ -29,9 +31,13 @@ NETWORK_CC=$(basename $PWD | tr '[:upper:]' '[:lower:]')
 ```
   
 >then 
-```
+ 
+``` 
 sed -i -e "/NETWORKMODE/c\      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE="$NETWORK_CC"_default" base/peer-base.yaml
+```  
 
+From this on, we can continue with :  
+```
 CHANNEL_NAME=mychannel TIMEOUT=100 docker-compose -f docker-compose-cli.yaml -d
 
 docker exec -it cli bash
