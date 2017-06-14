@@ -23,7 +23,7 @@ You can also fulfill it by followind theses commands then reading the getting_st
 ```
  
 
->In case you don't use ./generate_artifacts, you have to modify the base/peer-base.yaml file on the line - >CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE= to correspond to - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=(folder with docker->compose-cli.bash)_default either by modifying it yourself or by using :
+> In case you don't use ./generate_artifacts, you have to modify the base/peer-base.yaml file on the line `CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=` to correspond to `CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=(folder with docker-compose-cli.bash)_default` either by modifying it yourself or by using :
 ```
 NETWORK_CC=$(basename $PWD | tr '[:upper:]' '[:lower:]')
 ```
