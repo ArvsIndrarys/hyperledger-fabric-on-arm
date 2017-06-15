@@ -1,5 +1,5 @@
 # Hyperledger On Arm
-Makes hyperledger version 1.0..0 alpha2 working on arm architectures as well (tested on armv7l - Raspberry Pi 3 Model B)
+Makes hyperledger version 1.0.0-beta working on arm architectures as well (tested on armv7l - Raspberry Pi 3 Model B)
 
 ### Steps to make the getting_started to work :
 
