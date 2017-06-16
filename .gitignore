@@ -1,3 +1,4 @@
 ./channel-artifacts
 ./crypto-config
+docker-compose-e2e.yaml
 
