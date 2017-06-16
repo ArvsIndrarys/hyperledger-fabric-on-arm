@@ -20,8 +20,14 @@ dockerFabricPull() {
   for IMAGES in peer orderer couchdb ccenv javaenv kafka tools zookeeper baseos; do
       echo "==> FABRIC IMAGE: $IMAGES"
       echo
+      if test "$IMAGES" = "baseos"
+      then 
+	docker pull talium/fabric-$IMAGES:armv7l-0.3.1
+	docker tag talium/fabric-$IMAGES:armv7l-0.3.1 talium/fabric-$IMAGES
+      else
       docker pull talium/fabric-$IMAGES:$FABRIC_TAG
       docker tag talium/fabric-$IMAGES:$FABRIC_TAG talium/fabric-$IMAGES
+      fi  
   done
 }
 
