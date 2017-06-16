@@ -17,7 +17,7 @@ ARCH=`uname -m`
 
 dockerFabricPull() {
   local FABRIC_TAG=$1
-  for IMAGES in peer orderer couchdb ccenv javaenv kafka tools zookeeper; do
+  for IMAGES in peer orderer couchdb ccenv javaenv kafka tools zookeeper baseos; do
       echo "==> FABRIC IMAGE: $IMAGES"
       echo
       docker pull talium/fabric-$IMAGES:$FABRIC_TAG
