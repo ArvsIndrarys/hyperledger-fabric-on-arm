@@ -106,7 +106,7 @@ function modifyPeerBase() {
         echo "##########################################################"
 
 
-	NETWORK_HL=$(basename $PWD | tr '[:upper:]' '[:lower:]')
+	NETWORK_HL=$(basename $PWD | tr '[:upper:]' '[:lower:]' | sed 's/[^a-zA-Z0-9]//g')
 	echo $NETWORK_HL
 	sed -i -e "/NETWORKMODE/c\      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE="$NETWORK_HL"_default" base/peer-base.yaml
 	echo "Modified ./base/peer-base.yaml to remplace the network CORE_VM_HOSTCONFIG_NETWORKMODE to $NETWORK_HL default"
