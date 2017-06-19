@@ -72,4 +72,4 @@ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
  ### WARNINGS
  As presented on the tutorial page, the scripts network.sh and scripts/script.sh aren't working. They have been removed so it is unlikely that they
  would work as most of the files have been adapted (docker-compose-cli.yaml for example).  
-After some modifications between two runs, it may be necessary to remove the old chaincode image for the instantiate to work properly.
+After some modifications between two runs, it may be necessary to remove the old chaincode image for the instantiation to work properly.
