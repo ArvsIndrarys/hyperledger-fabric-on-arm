@@ -8,8 +8,8 @@ Currently still working with the beta 1.0.0 tutorial on : http://hyperledger-fab
 So open that link and execute this commands : 
 
 ```
-go get github.com/Lindemark/hyperledger-on-arm
-cd ~/go/src/github.com/Lindemark/hyperledger-on-arm
+go get github.com/ArvsIndrarys/hyperledger-fabric-on-arm
+cd ~/go/src/github.com/ArvsIndrarys/hyperledger-fabric-on-arm
 ```
 and next :
 ```
